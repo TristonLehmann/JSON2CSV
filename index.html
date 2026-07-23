@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>JSON2CSV</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"/>
+        <link rel="stylesheet" href="./styles/reset.css"/>
+        <link rel="stylesheet" href="./styles/styles.css"/>
+        <script src="./scripts/index.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <form>
+                <fieldset>
+                    <legend>JSON to CSV Converter</legend>
+
+                    <label for="json">JSON:</label>
+                    <textarea id="json" rows="10" cols="50" required></textarea>
+
+                    <label for="csv">CSV:</label>
+                    <textarea id="csv" rows="10" cols="50" readonly></textarea>
+
+                    <div class="actions">
+                        <button type="submit">Convert</button>
+                        <button type="button">Clear</button>
+                    </div>
+                </fieldset>
+            </form>
+        </main>
+    </body>
+</html>
