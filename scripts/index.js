@@ -19,14 +19,17 @@ const jsonToCSV = () => {
         rows.push(Object.values(jsonData[i]).join(","));
     }
 
-    const csvData = header + "\n" + rows.join("\n");
-
-    const csv = document.getElementById("csv");
-    csv.value = csvData;
+    document.getElementById("csv").value = header + "\n" + rows.join("\n");
 }
 
 const form = document.querySelector("form");
 form.addEventListener("submit", event => {
     event.preventDefault();
     jsonToCSV();
+});
+
+const clearBtn = document.querySelector('input[type="button"]');
+clearBtn.addEventListener("click", () => {
+    document.getElementById("json").value = "";
+    document.getElementById("csv").value = "";
 });
